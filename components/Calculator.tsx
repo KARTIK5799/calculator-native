@@ -9,7 +9,7 @@ const Calculator = () => {
     const [operator, setOperator] = useState('')
 
     const handleNumberInput = (num: string) => {
-        if (displayValue == '0') {
+        if (displayValue === '0') {
             setDisplayValue(num);
         } else {
             setDisplayValue(displayValue + num);
@@ -60,7 +60,7 @@ const Calculator = () => {
             </View>
             <View style={styles.keypad}>
                 <Button title="C" type="top" onPress={handleClear} />
-                <Button title="<=" type="top" onPress={handleDelete} />
+                <Button title="<" type="top" onPress={handleDelete} />
                 <Button title="%" type="top" onPress={() => handleOperatorInput('%')} />
                 <Button title="÷" type="right" onPress={() => handleOperatorInput('/')} />
 
